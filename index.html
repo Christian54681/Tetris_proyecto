@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="game">
+        <div class="canvasContenedor">
+            <span>NIVEL</span>
+            <div class="canvasPizquierdo">
+                <span id="nivel">1</span>
+            </div>
+            <span>HIGH SCORE</span>
+            <div class="canvasPizquierdo">
+                <span id="highScore">1</span>
+            </div>
+        </div>
+        <div class="canvasContenedor">
+            <span class="scoreContenedor"> SCORE: <span id="score">0</span></span>
+            <div class="canvas">
+                <canvas id="canvasTetris"></canvas>
+            </div>
+        </div>
+        <div class="canvasContenedor">
+            <span>NEXT</span>
+            <div class="canvas">
+                <canvas id="canvasSiguientes"></canvas>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <span>TETRIS</span>
+            <button id="btn-start">START</button>
+        </div>
+    </div>
+
+    <script type="module" src="/logica/main.js"></script>
+</body>
+
+</html>

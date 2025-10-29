@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0b0c10, #1f2833);
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.canvasContenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: #3C3E52;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.canvas {
+    background: #000;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.canvasPizquierdo {
+    background: #000;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.canvasContenedor span,
+.menu span {
+    color: #fff;
+    font-size: 25px;
+}
+.canvas #nivel {
+    padding: 50px;
+}
+
+.canvasContenedor .scoreContenedor,
+#score {
+    font-size: 20px;
+}
+
+.canvasPizquierdo {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: radial-gradient(circle at top left, #111 0%, #000 100%);
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5), inset 0 0 10px rgba(0, 229, 255, 0.2);
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 40px;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+/* Efecto de aparición */
+
+.menu span {
+    color: #00e5ff;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+.menu button {
+    width: 200px;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00e5ff, #0078ff);
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.menu button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+    background: linear-gradient(135deg, #00ffff, #008cff);
+}
+
+.menu button:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
