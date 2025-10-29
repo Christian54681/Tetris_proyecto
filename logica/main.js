@@ -7,6 +7,7 @@ const menu = document.getElementById('menu');
 const btnMenu = document.getElementById('btn-start');
 const nivel = document.getElementById('nivel');
 const highScoreElement = document.getElementById('highScore');
+const tetrisMusic = document.getElementById('tetris-music');
 
 const rows = 20;
 const cols = 10;
@@ -17,7 +18,9 @@ const game = new Game(canvasTetris, rows, cols, cellSize, space, canvasSiguiente
 
 function dibujarFrame(){
     if (game.gameOver) {
-        menu.style.display = "flex"
+        menu.style.display = "flex";
+        tetrisMusic.pause();
+        tetrisMusic.currentTime = 0;
     } else{
         game.actualizar();
         score.innerHTML = game.score;
@@ -31,11 +34,16 @@ btnMenu.addEventListener("click", () =>{
         menu.style.display = "none";
         game.reset();
         actualizarHighScoreDisplay();
+
+        tetrisMusic.play().catch(error => {
+            console.warn("La reproducción automática falló. ", error);
+        });
     }, 200);
 });
 
 actualizarHighScoreDisplay();
 dibujarFrame();
+tetrisMusic.play()
 
 
 function actualizarHighScoreDisplay() {
